@@ -17,4 +17,6 @@ ADD set_mongodb_password.sh /set_mongodb_password.sh
 
 EXPOSE 27017 28017
 
-CMD ["/run.sh"]
+#CMD ["/run.sh"]
+
+ENTRYPOINT ["/run.sh"]

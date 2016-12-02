@@ -13,7 +13,8 @@ mkdir $HOME/mongodb/data/db
 docker run --rm -h mongodb --name MongoDB \
 	-p 27017:27017 -p 28017:28017 \
 	-e AUTH=no \
-	-v $HOME/mongodb/data/db:/data/db izone/mongodb
+	-v $HOME/mongodb/data/db:/data/db \
+	-ti izone/mongodb bash
 ```
 #### MongoDB without password
 ```
@@ -31,6 +32,10 @@ docker exec -ti MongoDB bash
 ### Copy json files to the created directory and import into mongodb
 ```
 mongoimport --stopOnError --db loja --collection clientes < "/data/db/clientes.json"
+
+mongo loja
+db
+show collections
 ```
 
 

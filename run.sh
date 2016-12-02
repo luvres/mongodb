@@ -1,5 +1,5 @@
 #!/bin/bash
-set -m
+#set -m
 
 mongodb_cmd="mongod --storageEngine $STORAGE_ENGINE"
 cmd="$mongodb_cmd --httpinterface --rest --master"
@@ -21,4 +21,10 @@ if [ ! -f /data/db/.mongodb_password_set ]; then
     /set_mongodb_password.sh
 fi
 
-fg
+if [[ $1 == "bash" ]]; then
+  /bin/bash
+fi
+
+#mongod
+
+#fg
