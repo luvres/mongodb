@@ -1,6 +1,6 @@
 ## MongoDB 3.4 (NoSQL Database)
 ---
-### Pull image latest (with Ubuntu 14:04)
+### Pull image latest (with Ubuntu 16:04)
 ```
 docker pull izone/mongodb
 ```
