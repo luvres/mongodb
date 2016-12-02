@@ -1,8 +1,12 @@
 ## MongoDB 3.4 (NoSQL Database)
 ---
-### Pull image latest (with Ubuntu 16:04)
+### Pull image latest (Debian)
 ```
 docker pull izone/mongodb
+```
+### Pull image with Ubuntu 16:04
+```
+docker pull izone/mongodb:ubuntu
 ```
 #### Create a directory for import collections and Include directory created above on flag "-v"
 ```
