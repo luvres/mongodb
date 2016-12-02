@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -m
+set -m
 
 mongodb_cmd="mongod --storageEngine $STORAGE_ENGINE"
 cmd="$mongodb_cmd --httpinterface --rest --master"
@@ -25,6 +25,4 @@ if [[ $1 == "bash" ]]; then
   /bin/bash
 fi
 
-#mongod
-
-#fg
+fg
