@@ -13,7 +13,7 @@ mkdir $HOME/mongodb/data/db
 docker run --rm -h mongodb --name MongoDB \
 	-p 27017:27017 -p 28017:28017 \
 	-e AUTH=no \
-	-v $HOME/mongodb/data/db:/data/db mongodb
+	-v $HOME/mongodb/data/db:/data/db izone/mongodb
 ```
 #### MongoDB without password
 ```
