@@ -35,6 +35,8 @@ docker exec -ti MongoDB bash
 ```
 ### Copy json files to the created directory and import into mongodb
 ```
+wget https://raw.githubusercontent.com/luvres/mongodb/master/clientes.json -O $HOME/mongodb/data/db
+
 mongoimport --stopOnError --db loja --collection clientes < "/data/db/clientes.json"
 
 mongo loja
