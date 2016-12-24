@@ -10,14 +10,14 @@ docker pull izone/mongodb:ubuntu
 ```
 #### Create a directory for import collections and Include directory created above on flag "-v"
 ```
-mkdir $HOME/mongodb/data/db
+mkdir $HOME/data/mongodb
 ```
 ### Run pulled image
 ```
 docker run --rm -h mongodb --name MongoDB \
 	-p 27017:27017 -p 28017:28017 \
 	-e AUTH=no \
-	-v $HOME/mongodb/data/db:/data/db \
+	-v $HOME/data/mongodb:/data/db \
 	-ti izone/mongodb bash
 ```
 #### MongoDB without password
@@ -43,5 +43,3 @@ mongo loja
 db
 show collections
 ```
-
-
